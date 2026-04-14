@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dental Care | Precision & Comfort</title>
+    <meta name="description" content="Experience premium dental care with advanced technology and a gentle touch. Your smile, our priority.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Three.js for 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+
+    <header id="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-tooth" style="color: var(--accent); margin-right: 12px; font-size: 1.8rem;"></i>Pure<span>Smile</span>
+                </div>
+                <nav class="nav-links">
+                    <div class="mobile-nav-top">
+                        <div class="logo">
+                            <i class="fas fa-tooth" style="color: var(--accent); margin-right: 12px; font-size: 1.8rem;"></i>Pure<span>Smile</span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#hero" class="nav-item">About</a></li>
+                        <li><a href="#parallax-features" class="nav-item">Services</a></li>
+                        <li><a href="#gallery" class="nav-item">Results</a></li>
+                        <li><a href="#team" class="nav-item">Experts</a></li>
+                        <li><a href="#faq" class="nav-item">FAQ</a></li>
+                    </ul>
+                    <div class="mobile-nav-bottom">
+                        <a href="#contact" class="btn btn-primary">Book Appointment</a>
+                    </div>
+                </nav>
+                <div class="nav-actions">
+                    <a href="#contact" class="btn btn-primary nav-btn-desktop">Book Appointment</a>
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="app-content">
+        <!-- Realistic Tooth Image Container -->
+        <div id="tooth-container">
+            <img src="https://i.postimg.cc/yNjPyMrz/Gemini-Generated-Image-yh7yexyh7yexyh7y-removebg-preview.png" id="main-tooth" alt="Premium Dental Care">
+        </div>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <div class="text-block">
+                    <h1 class="reveal-text">Experience the Future <br>of <span>Dental Excellence</span></h1>
+                    <p class="reveal-text">Precision care meets unparalleled comfort. Utilizing advanced 3D technology for your perfect smile.</p>
+                    <div class="btn-group reveal-text">
+                        <a href="#appointment" class="btn-primary">Book Consultation</a>
+                        <a href="#services" class="btn-secondary">Explore Services</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Details -->
+        <section id="details" class="details-section">
+            <div class="container grid-layout">
+                <div class="empty-side"></div> <!-- Tooth will move here -->
+                <div class="content-side">
+                    <span class="badge">Advanced Technology</span>
+                    <h2>Complete Protection <br>For Your Natural Smile</h2>
+                    <p>Our futuristic approach ensures that your dental health is protected with 360-degree precision. From 3D scanning to AI-driven diagnostics, we redefine what it means to visit the dentist.</p>
+                    <ul class="feature-list">
+                        <li><span>✔</span> Real-time 3D Dental Mapping</li>
+                        <li><span>✔</span> Painless Laser Treatments</li>
+                        <li><span>✔</span> Personalized Oral Care Plans</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Sliding Parallax Features (Your requested code adapted) -->
+        <div class="ka-parallax-wrapper" id="parallax-features">
+            <div class="ka-sticky-box">
+                <div class="ka-main-frame glass-card">
+                    
+                    <div class="ka-panel" id="text-panel">
+                        <div class="ka-block bg-cool-light ka-text-content">
+                            <div class="ka-pill">Why PureSmile</div>
+                            <h2>Customized<br>Treatments</h2>
+                            <p>Every smile is unique. We provide tailored dental plans designed specifically for your oral anatomy and goals.</p>
+                        </div>
+                        <div class="ka-block bg-cool-dark ka-text-content">
+                            <div class="ka-pill">Modern Care</div>
+                            <h2>Advanced<br>Technology</h2>
+                            <p>Utilizing high-precision 3D scanning and AI diagnostics to ensure the most accurate dental procedures.</p>
+                        </div>
+                        <div class="ka-block bg-cool-light ka-text-content">
+                            <div class="ka-pill">Our Promise</div>
+                            <h2>Pain-free<br>Experience</h2>
+                            <p>Comfort redefined. Our specialized sedation and laser techniques ensure a completely anxiety-free visit.</p>
+                        </div>
+                    </div>
+
+                    <div class="ka-panel" id="image-panel">
+                        <div class="ka-block ka-img-content">
+                            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1170" alt="Dental Care 1">
+                        </div>
+                        <div class="ka-block ka-img-content">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1170" alt="Dental Care 2">
+                        </div>
+                        <div class="ka-block ka-img-content">
+                            <img src="https://images.unsplash.com/photo-1445527815219-ecbfec67492e?q=80&w=1170" alt="Dental Care 3">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Before & After Expanding Gallery (Your requested code adapted) -->
+        <section id="gallery" class="gallery-wrapper">
+            <div class="container gallery-container">
+                <span class="badge">Results That Speak</span>
+                <h2 class="section-title">Smile Transformations</h2>
+                <div class="gallery-section">
+                    
+                    <div class="ba-panel active" onclick="openPanel(this)">
+                        <div class="image-wrapper">
+                            <img src="https://i.postimg.cc/FRpDHThc/66c782a56f7ce2c4d279edff-swfsdf-p-500.webp" alt="Jon Toner">
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="vertical-label">Professional Whitening</div>
+                        <div class="panel-info">
+                            <h2>Jon Toner</h2>
+                            <p>Transforming smiles with professional teeth whitening and alignment services.</p>
+                        </div>
+                        <div class="panel-number">1</div>
+                    </div>
+
+                    <div class="ba-panel" onclick="openPanel(this)">
+                        <div class="image-wrapper">
+                            <img src="https://i.postimg.cc/HxzBk6T9/66d9a46aa2ada52b2816f60e-74619-p-500.jpg" alt="Keith Smith">
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="vertical-label">Gum Health</div>
+                        <div class="panel-info">
+                            <h2>Keith Smith</h2>
+                            <p>Expert care for gum health and comprehensive dental reconstruction.</p>
+                        </div>
+                        <div class="panel-number">2</div>
+                    </div>
+
+                    <div class="ba-panel" onclick="openPanel(this)">
+                        <div class="image-wrapper">
+                            <img src="https://i.postimg.cc/59kSKY0p/66d9a5554d36945d49afdab3-5510-p-500.jpg" alt="Sarah Jenkins">
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="vertical-label">Cosmetic Dentistry</div>
+                        <div class="panel-info">
+                            <h2>Sarah Jenkins</h2>
+                            <p>A natural approach to cosmetic dentistry and porcelain veneers.</p>
+                        </div>
+                        <div class="panel-number">3</div>
+                    </div>
+
+                    <div class="ba-panel" onclick="openPanel(this)">
+                        <div class="image-wrapper">
+                            <img src="https://i.postimg.cc/XqvxG9vG/66d9a4f6d88b2ad63c03128a-172361_p-800.jpg" alt="Emily Rose">
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="vertical-label">Orthodontics</div>
+                        <div class="panel-info">
+                            <h2>Emily Rose</h2>
+                            <p>Complete smile transformation through advanced orthodontic solutions.</p>
+                        </div>
+                        <div class="panel-number">4</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: VIP Cinematic Elite Tech (Your requested code adapted) -->
+        <section id="vip-experience" class="vip-hero">
+            <video autoplay muted loop playsinline class="vip-video">
+                <source src="https://mediumslateblue-wren-581411.hostingersite.com/wp-content/uploads/2026/04/687b429c06a6f95d601a7b79_687dd3545828679cc0da4028_38386-416330783_tiny-transcode.mp4" type="video/mp4">
+            </video>
+
+            <div class="vip-overlay"></div>
+
+            <div class="vip-card glass-card">
+                <div class="vip-tag">Elite Dental Tech</div>
+                <h2 class="vip-title">Where Technology<br>Meets <span>Artistry</span></h2>
+                <p class="vip-text">Experience the future of dentistry with our state-of-the-art cinematic smile design and painless laser procedures.</p>
+                <a href="#appointment" class="vip-btn">Start Your Transformation</a>
+            </div>
+
+            <div class="scroll-hint">Excellence in Every Frame</div>
+        </section>
+
+        <!-- Section 6: Stacked Testimonials (Your requested code adapted) -->
+        <section id="testimonials" class="testimonial-wrapper">
+            <div class="container testimonial-container">
+                <!-- Added Section Heading -->
+                <div class="testimonial-header">
+                    <span class="badge">Success Stories</span>
+                    <h2 class="section-title">What Our Patients Say</h2>
+                </div>
+                
+                <div class="ka-testimonial-section">
+                    <div class="ka-image-stack" id="stack">
+                        <div class="ka-card active" data-id="0">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=688&auto=format&fit=crop">
+                        </div>
+                        <div class="ka-card behind" data-id="1">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1470&auto=format&fit=crop">
+                        </div>
+                        <div class="ka-card far-behind" data-id="2">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=687&auto=format&fit=crop">
+                        </div>
+                    </div>
+
+                    <div class="ka-content-area">
+                        <div class="ka-dots">
+                            <div class="ka-dot active"></div>
+                            <div class="ka-dot"></div>
+                            <div class="ka-dot"></div>
+                        </div>
+
+                        <div class="ka-text-box">
+                            <div class="ka-testimonial active" id="text-0">
+                                <p class="ka-quote">“Amazing experience! The team at PureSmile is friendly, and Dr. Olivia made sure I felt comfortable throughout my treatment. I’m very happy with the results”</p>
+                                <div class="ka-footer">
+                                    <span class="ka-name">Catherine Reiss</span>
+                                    <span class="ka-info">Routine check-ups and cleanings</span>
+                                </div>
+                            </div>
+
+                            <div class="ka-testimonial" id="text-1">
+                                <p class="ka-quote">“Professional and caring. The results were better than I expected. The new 3D mapping technology they use makes everything so much easier.”</p>
+                                <div class="ka-footer">
+                                    <span class="ka-name">Sarah Johnson</span>
+                                    <span class="ka-info">Dental Implants</span>
+                                </div>
+                            </div>
+
+                            <div class="ka-testimonial" id="text-2">
+                                <p class="ka-quote">“I finally found a dentist I can trust. The process was painless and the staff truly goes above and beyond for their patients.”</p>
+                                <div class="ka-footer">
+                                    <span class="ka-name">Jessica Williams</span>
+                                    <span class="ka-info">Teeth Whitening</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Meet Our Specialists Sticky Stacking (Your requested code adapted) -->
+        <section id="team" class="team-wrapper">
+            <div class="container team-container">
+                <div class="team-header">
+                    <span class="badge">Pure Specialists</span>
+                    <h2 class="section-title">Meet Our Experts</h2>
+                </div>
+
+                <div class="cards-stack" id="team-stack">
+                    <!-- Specialist 1 -->
+                    <div class="doctor-card dr-card">
+                        <div class="doctor-img">
+                            <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=1000" alt="Dr. Olivia Grace">
+                        </div>
+                        <div class="doctor-info">
+                            <span class="specialty">Senior Orthodontist</span>
+                            <h3>Dr. Olivia Grace</h3>
+                            <p>Specializing in modern aligners and aesthetic dentistry with over 12 years of clinical experience across Europe and Asia.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specialist 2 -->
+                    <div class="doctor-card dr-card">
+                        <div class="doctor-img">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1064" alt="Dr. James Miller">
+                        </div>
+                        <div class="doctor-info">
+                            <span class="specialty">Cosmetic Surgeon</span>
+                            <h3>Dr. James Miller</h3>
+                            <p>Expert in full smile makeovers and laser-guided painless dental procedures for a perfect VIP look and lasting health.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specialist 3 -->
+                    <div class="doctor-card dr-card">
+                        <div class="doctor-img">
+                            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=987" alt="Dr. Sophia Chen">
+                        </div>
+                        <div class="doctor-info">
+                            <span class="specialty">Pediatric Dentist</span>
+                            <h3>Dr. Sophia Chen</h3>
+                            <p>Dedicated to providing a comfortable and friendly dental experience for children ensuring a lifelong positive oral health habit.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: FAQ Accordion -->
+        <section id="faq" class="faq-wrapper">
+            <div class="container">
+                <div class="faq-header">
+                    <span class="badge">Information</span>
+                    <h2 class="section-title">Common Questions</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">What services do you offer? <i class="fas fa-plus"></i></div>
+                        <div class="faq-answer">We provide a full range of services including cosmetic dentistry, implants, orthodontics, and emergency care using the latest 3D mapping technology.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How can I book an appointment? <i class="fas fa-plus"></i></div>
+                        <div class="faq-answer">You can book directly via our "Book Appointment" button or call our 24/7 helpdesk for immediate assistance.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Is professional teeth whitening safe? <i class="fas fa-plus"></i></div>
+                        <div class="faq-answer">Yes, our laser-guided whitening process is 100% enamel-safe and performed under specialist supervision.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Do you offer dental implants? <i class="fas fa-plus"></i></div>
+                        <div class="faq-answer">Absolutely. We specialize in high-precision dental implants with minimal recovery time.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Contact Form -->
+        <section id="contact" class="contact-wrapper">
+            <div class="container contact-container">
+                <div class="contact-info-panel">
+                    <span class="badge">Get in Touch</span>
+                    <h2>Let's Design Your<br><span>Perfect Smile</span></h2>
+                    <p>Have questions or ready to book? Our specialists are here to guide you through your transformation journey.</p>
+                </div>
+                <form class="contact-form glass-card" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Select Service</option>
+                            <option value="cosmetic">Cosmetic Dentistry</option>
+                            <option value="implants">Dental Implants</option>
+                            <option value="checkup">Routine Checkup</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="vip-btn" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
+                </form>
+
+                <div id="form-success" class="form-success glass-card" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your message has been sent successfully. We will get back to you soon.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Final Footer Section -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo" style="color: #fff !important;">
+                    <i class="fas fa-tooth" style="color: var(--accent); margin-right: 12px; font-size: 1.8rem;"></i>Pure<span>Smile</span>
+                </div>
+                <p>Exceptional dental care combined with state-of-the-art technology. Your journey to a perfect smile starts here.</p>
+                <div class="social-links footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Cosmetic Dentistry</a></li>
+                        <li><a href="#">Dental Implants</a></li>
+                        <li><a href="#">Orthodontics</a></li>
+                        <li><a href="#">Whiter Smiles</a></li>
+                    </ul>
+                </div>
+                <div class="link-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our Specialists</a></li>
+                        <li><a href="#">Patient Stories</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="link-col contact-col">
+                    <h4>Connect</h4>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@puresmile.com</p>
+                    <p><i class="fas fa-location-dot"></i> 500 Modern Ave, New York</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PureSmile Dental Clinic. All Rights Reserved. Crafted for Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
